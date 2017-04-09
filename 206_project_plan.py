@@ -2,14 +2,14 @@
 ## The option you've chosen: 2
 
 # Put import statements you expect to need here!
-import unittests
+import unittest
 import itertools
 import collections 
+import re
 import tweepy
 import twitter_info
 import json
 import sqlite3
-
 
 
 
@@ -48,13 +48,13 @@ class Task1(unittest.TestCase):
 		i = Movie(movie_dict)
 		self.assertEqual(type(i.get_actors()), type(['hello']))
 	def test_actors_tweets(self):
-		i = Movie(movie_dict):
+		i = Movie(movie_dict)
 		actor = i.get_actors()[0]
 		actor_data = get_user_tweets(actor)
 		self.assertEqual(actor_data[1]['user']['screen_name'], actor)
 	def test_get_user2(self):
 		l = get_user_tweets("will smith")
-		self.assertEqual(type(l[1]), type({})
+		self.assertEqual(type(l[1]), type({}))
 
 
 
@@ -63,4 +63,3 @@ class Task1(unittest.TestCase):
 
 if __name__ == "__main__":
 	unittest.main(verbosity=2)
-
