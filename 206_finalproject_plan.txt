@@ -1,0 +1,142 @@
+SI 206 W17
+Put your name here: Michael Braunstein
+
+----
+
+Which option for the final project are you choosing -- 1, 2, or 3?
+
+2
+
+IF YOU ARE CHOOSING OPTION 3, answer the following questions:
+
+* Write 1-3 sentences summarizing what the goal of your project is:
+
+
+* What are your two data sources? Provide links to documentation or websites you will be getting data from.
+
+
+* Why are you proposing this project?
+
+
+* What will the output of this project be? What will it look like, and what information will it contain?
+
+
+* What are your concerns about this proposal?
+
+
+-----
+
+THE FOLLOWING QUESTIONS ARE FOR EVERYONE. (Though they may be easier if you are choosing Option 1 or 2, because you can reference the Option 1 or 2 instructions.)
+
+* What will at least one of the classes you're going to define be called?
+I am going to name one of my classes Movie. 
+
+
+* What will that class take as input to its constructor?
+This class’s constructor will take in a dictionary that represents a movie. 
+
+
+* What will 1 instance of this class represent?
+One instance of this class will be a given movie. 
+
+
+* What are 3 instance variables this class will have? What will they be called, and what information will they hold? Why are they important?
+4 instance variables this class will have are the movie, title of the movie, the director of the movie, the IMDB rating. They will be called movie, title, director, and rating. These are important because you are then able to call these parts of the movie into different methods within the class. You don’t want to have to pick out the title of the movie overtime you need it, instead you can find it once, save it in an instance variable, and then call the instance variable when you need that piece of information.
+
+* Explain 2 methods the class will have that are not the class constructor (__init__ method) by answering the following questions for each. 
+ONE METHOD:
+- What will the name of the method be?
+1. the name of the method will be __str__: method which will return a string about the movie.
+
+
+- What will the method do?
+1. This will return a string about the movie including the title, the director, and other things that might be interesting to know. 
+ 
+- Will it take any additional input? 
+This method will not need any additional input
+
+- Will it return anything? Should it change anything about the instance/an instance variable? 
+This method will return values and will not change anything about the instance of the movie or the instance variables. 
+
+- Why is it useful for this class definition, in this program?
+This is useful for this class definition because it can help explain the the user more information about the movie(s) they are looking at in one string. Looking at large sets of data is confusing and to be able to simplify the data will a short text explaining a summary of the movie and certain things about it will make it very useful for the user. 
+
+
+ANOTHER METHOD:
+- What will the name of the method be?
+The name of the other method will be get_actors
+
+- What will the method do?
+This get_actors method will return a list of the actors in the movie.
+
+- Will it take any additional input? 
+This method will not need any additional input
+
+
+- Will it return anything? Should it change anything about the instance/an instance variable? 
+This method will return values and will not change anything about the instance of the movie or the instance variables. 
+
+- Why is it useful for this class definition, in this program?
+This is useful because you want to be able to call this method and have it return a list of actors, which then you will be able to save in a variable and then use that to call on the other class in order to get data from twitter about these actors. It makes it very easy to call a method from one class and use the outputs as inputs for another class.  
+
+[If you definitely want to have a third, feel free to answer those questions a third time, because you'll have to do so eventually. when you write documentation!]
+
+
+* What will the tables in your database be?
+The tables that I will have in my database will be: 
+Tweets
+Users
+Movies
+
+* What fields will each database table have? Which field of them is the primary key? You should list the fields for each database table here, e.g.
+Tweets:
+- text 
+- ID (primary key)
+- tweet_user (reference to Users table) 
+- associated_movie
+- num_favorites
+- num_retweets
+
+Users:
+- ID (primary key)
+- screen_name
+- user_favorites
+- additional but don’t know yet
+
+Movies: 
+- ID (primary key) 
+- title 
+- director
+- num_languages
+- rating
+- top_actor
+
+
+
+* List, in English, 2 queries you'll want to make from your database. At least one should be a JOIN. You can always change these later, but start with  ideas you're interested in and lessen the work on yourself later on! 
+(e.g. from class examples, maybe "I want to make a query that accesses the numbers of times each user has favorited tweets, and the number of times tweets that user posted have been favorited -- so I'll be joining the Tweets table and the Users table")
+
+I want to make a query that accesses the number of favorites for the associated movies, and what that movies rating was— So I’ll be joining the Tweets table and the Movies table. 
+
+I want to make another query that will access the Title of a move, the rating, and the top actor of the movie where the rating is  above some threshold. 
+
+
+* What are at least 2 of the data processing mechanics you're planning to use? 
+Two processing mechanics I plan on using are dictionary accumulation and set comprehension.  
+
+
+
+* Why will each of those be useful to you? What data might you use it on? 
+(e.g. "Set comprehension: I think I'm going to be looking for unique names and proper nouns in this big set of text, so I'm going to use a set comprehension"). 
+>>>This is especially important if you are doing Option 3, but it's important for everyone!<<<
+I want to be able to find the most popular movie in terms of highest number of favorites for tweets on that given movie, which would be a good place to use dictionary accumulation. Set comprehension will be useful to look at how many different users tweeted about a movie in order to not count one user who tweeted about the movie numerous times.
+
+
+
+* What will your output look like? Will it be a .txt file? a CSV file? something else? What information will it contain? >>>This is especially important if you are doing Option 3, but it's important for everyone!<<<
+
+
+I think I want to write a .txt file with stats on the most popular movies. I want to show what 3 movies are being talked about the most, what their ratings are, and who is staring in those movies. The most popular movies should have good rankings so I want to provide a summary page giving people recommendations of what movies to go see that have been popular from ratings as well at activity about the movie on Twitter. 
+
+
+
